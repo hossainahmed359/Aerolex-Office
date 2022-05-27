@@ -1,7 +1,12 @@
-import '../styles/globals.css'
+import { ProtectedRoute } from '~/components/auth/ProtectedRoute';
+import '~/styles/index.scss';
 
 function MyApp({ Component, pageProps }) {
-  return <Component {...pageProps} />
+  return (
+    <ProtectedRoute {...pageProps}>
+      <Component {...pageProps} />
+    </ProtectedRoute>
+  );
 }
 
-export default MyApp
+export default MyApp;

@@ -1,0 +1,259 @@
+/* Container */
+.home {
+  display: flex;
+  align-items: flex-start;
+  justify-content: center;
+
+}
+
+.outlined-form-container,
+.standard-form-container,
+.plain-form-container {
+  margin: auto;
+  min-width: 350px;
+  margin: 0 10px;
+
+  h2 {
+    text-align: start !important;
+    color: $color-dark  !important;
+    text-transform: uppercase;
+  }
+}
+
+
+input {
+  bottom: none;
+  outline: none;
+}
+
+/*===== Common Styles =====*/
+.form {
+  font-family: $body-font-roboto;
+
+  position: relative;
+  width: 100%;
+
+  &__input,
+  &__textarea {
+    font-size: $font-md;
+    color: $color-dark-two;
+    padding: 1rem;
+    outline: none;
+    background: none;
+  }
+
+
+  &__label,
+  &__append {
+    padding: 0 .25rem;
+    background-color: #fff;
+    color: $color-muted;
+    font-weight: $font-weight-400;
+    font-size: $font-sm;
+  }
+}
+
+
+
+/*===== Outlined Input =====*/
+.outlined-form {
+  width: 100%;
+
+  .form {
+
+    position: relative;
+    height: 50px;
+    margin: 1.7rem 0;
+
+    &__input,
+    &__textarea {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      border: 1.5px solid $color-secondary;
+      border-radius: .6rem;
+      z-index: 1;
+    }
+
+    &__textarea {
+      min-height: 150px;
+    }
+
+    &__label {
+      position: absolute;
+      top: 1.2rem;
+      left: 1rem;
+      transition: .5s;
+    }
+
+    &__append {
+      position: absolute;
+      top: 1rem;
+      right: 1rem;
+    }
+
+
+  }
+
+  /*Input focus move up label*/
+  .form__input:focus~.form__label,
+  .form__textarea:focus~.form__label {
+    top: -.5rem;
+    left: .8rem;
+    color: $color-info;
+    font-size: $font-xs;
+    font-weight: $font-weight-500;
+    z-index: 10;
+  }
+
+  /*Input focus sticky top label*/
+  .form__input:not(:placeholder-shown).form__input:not(:focus)~.form__label,
+  .form__textarea:not(:placeholder-shown).form__textarea:not(:focus)~.form__label {
+    top: -.5rem;
+    left: .8rem;
+    color: $color-info;
+    font-size: $font-xs;
+    font-weight: $font-weight-500;
+    z-index: 10;
+  }
+
+  /*Input focus*/
+  .form__input:focus,
+  .form__input:not(:placeholder-shown).form__input:not(:focus),
+  .form__textarea:focus,
+  .form__textarea:not(:placeholder-shown).form__textarea:not(:focus) {
+    border: 1.5px solid $color-info;
+  }
+
+}
+
+
+/*===== Standard Input =====*/
+.standard-form {
+  width: 100%;
+
+  .form {
+
+    position: relative;
+    height: 50px;
+    margin: 1.7rem 0;
+
+    &__input,
+    &__textarea {
+      position: absolute;
+      top: 0;
+      left: 0;
+      padding-left: 0;
+      width: 100%;
+      height: 100%;
+      border: none;
+      border-bottom: 1px solid $color-secondary;
+      z-index: 1;
+    }
+
+    &__textarea {
+      min-height: 150px;
+    }
+
+    &__label {
+      position: absolute;
+      top: 1.2rem;
+      left: 0;
+      transition: .5s;
+      padding-left: 0;
+    }
+
+    &__append {
+      position: absolute;
+      top: 1rem;
+      right: 0;
+      padding-right: 0;
+    }
+
+
+  }
+
+  /*Input focus move up label*/
+  .form__input:focus~.form__label,
+  .form__textarea:focus~.form__label {
+    top: -.5rem;
+    color: $color-info;
+    font-size: $font-xs;
+    font-weight: $font-weight-500;
+    z-index: 10;
+  }
+
+  /*Input focus sticky top label*/
+  .form__input:not(:placeholder-shown).form__input:not(:focus)~.form__label,
+  .form__textarea:not(:placeholder-shown).form__textarea:not(:focus)~.form__label {
+    top: -.5rem;
+    color: $color-info;
+    font-size: $font-xs;
+    font-weight: $font-weight-500;
+    z-index: 10;
+  }
+
+  /*Input focus*/
+  .form__input:focus,
+  .form__input:not(:placeholder-shown).form__input:not(:focus),
+  .form__textarea:focus,
+  .form__textarea:not(:placeholder-shown).form__textarea:not(:focus) {
+    border-color: $color-info;
+  }
+
+}
+
+
+/*===== Standard Input =====*/
+.plain-form {
+  width: 100%;
+  padding: 0 0 1.7rem 0;
+  position: relative;
+
+  .form {
+
+    &__input,
+    &__textarea {
+      width: 100%;
+      border: 1.5px solid $color-secondary;
+      border-radius: .6rem;
+    }
+
+    &__input {
+      height: 50px;
+    }
+
+    &__textarea {
+      height: 150px;
+    }
+
+    &__label {
+      margin-bottom: 15px;
+      padding: 0;
+      color: $color-dark-two;
+      display: block;
+
+    }
+
+    &__append {
+      position: absolute;
+      top: 3.3rem;
+      right: 1rem;
+    }
+
+
+  }
+
+
+  /*Input focus*/
+  .form__input:focus,
+  .form__input:not(:placeholder-shown).form__input:not(:focus),
+  .form__textarea:focus,
+  .form__textarea:not(:placeholder-shown).form__textarea:not(:focus) {
+    border: 1.5px solid $color-info;
+  }
+
+
+}

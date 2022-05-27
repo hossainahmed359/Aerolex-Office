@@ -1,0 +1,78 @@
+/*==================== GOOGLE FONTS ====================*/
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&family=Roboto:wght@100;300;400;500;700;900&display=swap');
+
+
+/*====================== VARIABLES =====================*/
+
+
+/*========== Colors ==========*/
+$color-light: #FFFFFF;
+$color-light-two: #FAFAFB;
+$color-dark: #171725;
+$color-dark-two: #44444F;
+$color-primary: #0060B9;
+$color-secondary: #92929D;
+$color-danger: #EF4023;
+$color-info: #50B5FF;
+$color-success: #3DD598;
+$color-muted: #D5D5DC;
+$color-muted-two: #a6a6a6;
+$color-muted-three: #DEDEDE;
+
+
+/*========== Font and typography ==========*/
+$body-font-poppins: 'Poppins', sans-serif;
+$body-font-roboto: 'Roboto', sans-serif;
+
+
+/*========== Font size ==========*/
+//
+$font-xxxl: 56px;
+$font-xxl: 28px;
+$font-xl: 24px;
+$font-lg: 18px;
+$font-md: 16px;
+$font-sm: 14px;
+$font-xs: 12px;
+
+//
+$font-60: 60px;
+$font-55: 55px;
+$font-50: 50px;
+$font-45: 45px;
+$font-40: 40px;
+$font-35: 35px;
+$font-30: 30px;
+$font-25: 25px;
+$font-20: 20px;
+$font-15: 15px;
+$font-10: 10px;
+$font-05: 05px;
+
+
+/*========== Font weight ==========*/
+$font-weight-700: 700;
+$font-weight-600: 600;
+$font-weight-500: 500;
+$font-weight-400: 400;
+
+
+/*========== Margenes ==========*/
+$m-60: 60px;
+$m-50: 50px;
+$m-40: 40px;
+$m-30: 30px;
+$m-20: 20px;
+$m-10: 10px;
+$m-5: 05px;
+
+
+/*========== Paddings ==========*/
+$p-15: 15px;
+$p-17: 17.5px;
+
+
+/*========== z index ==========*/
+$z-tooltip: 10;
+$z-fixed: 100;
+$z-modal: 1000;
