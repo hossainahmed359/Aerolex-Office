@@ -26,7 +26,9 @@ input {
   width: 100%;
 
   &__input,
-  &__textarea {
+  &__textarea,
+  &__select,
+  &__option {
     font-size: $font-md;
     color: $color-dark-two;
     padding: 1rem;
@@ -198,7 +200,7 @@ input {
 }
 
 
-/*===== Standard Input =====*/
+/*===== Plaing Input =====*/
 .plain-form {
   width: 100%;
   padding: 0 0 1.7rem 0;
@@ -207,7 +209,8 @@ input {
   .form {
 
     &__input,
-    &__textarea {
+    &__textarea,
+    &__select {
       width: 100%;
       border: 1.5px solid $color-secondary;
       border-radius: .6rem;
@@ -221,6 +224,19 @@ input {
       height: 150px;
     }
 
+    &__select {
+
+      appearance: none;
+      z-index: 2;
+
+      option {
+        height: 50px;
+        font-size: $font-md;
+      }
+
+    }
+
+
     &__label {
       margin-bottom: 15px;
       padding: 0;
@@ -231,9 +247,12 @@ input {
 
     &__append {
       position: absolute;
+      color: $color-secondary;
       top: 3.1rem;
       right: 1rem;
+      z-index: -1;
     }
+
 
 
   }
@@ -243,9 +262,12 @@ input {
   .form__input:focus,
   .form__input:not(:placeholder-shown).form__input:not(:focus),
   .form__textarea:focus,
-  .form__textarea:not(:placeholder-shown).form__textarea:not(:focus) {
+  .form__textarea:not(:placeholder-shown).form__textarea:not(:focus),
+  .form__select:focus,
+  .form__select:hover {
     border: 1.5px solid $color-info;
   }
+
 
 
 }

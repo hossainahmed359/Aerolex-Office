@@ -60,6 +60,20 @@ const InputLibrary = () => {
             <textarea rows='5' cols='5' type="text" className="form__textarea" placeholder=" " />
           </div>
         </div>
+
+        {/* Selected Plain Field */}
+        <div className="plain-form">
+          <div action="" className="form">
+            <label htmlFor="" className="form__label">Select</label>
+            <select id="cars" name="cars" className='form__select' placeholder=" ">
+              <option className='form__option' value="volvo">Volvo XC90</option>
+              <option className='form__option' value="saab">Saab 95</option>
+              <option className='form__option' value="mercedes">Mercedes SLK</option>
+              <option className='form__option' value="audi">Audi TT</option>
+            </select>
+            <span className='form__append'>Icon</span>
+          </div>
+        </div>
       </div>
     </div>
   );
