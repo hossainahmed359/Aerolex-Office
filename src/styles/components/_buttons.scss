@@ -1,0 +1,26 @@
+.btn-danger-lg,
+.btn-secondary {
+  height: 50px;
+  border-radius: 10px;
+  font-family: $body-font-poppins;
+  font-weight: $font-weight-600;
+  font-size: $font-xs;
+  border: none;
+  padding: 15px 17px;
+  cursor: pointer;
+  width: 100%;
+}
+
+.btn-danger-lg {
+  background-color: $color-danger;
+  color: $color-light;
+}
+
+.btn-secondary {
+  background-color: $color-light;
+  color: $color-info;
+}
+
+.w-100 {
+  width: 100%;
+}

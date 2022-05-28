@@ -1,11 +1,3 @@
-/* Container */
-.home {
-  display: flex;
-  align-items: flex-start;
-  justify-content: center;
-
-}
-
 .outlined-form-container,
 .standard-form-container,
 .plain-form-container {
@@ -83,7 +75,7 @@ input {
 
     &__label {
       position: absolute;
-      top: 1.2rem;
+      top: 1.1rem;
       left: 1rem;
       transition: .5s;
     }
@@ -239,7 +231,7 @@ input {
 
     &__append {
       position: absolute;
-      top: 3.3rem;
+      top: 3.1rem;
       right: 1rem;
     }
 

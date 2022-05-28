@@ -1,7 +1,9 @@
 /* BASE AND COMPONENTS */
 @import './variables';
 @import './globals';
-@import './input-styles/input.scss';
+@import './components/input.scss';
+@import './components/buttons.scss';
 
 /* PAGE */
 @import './home';
+@import './pages/login.scss';
