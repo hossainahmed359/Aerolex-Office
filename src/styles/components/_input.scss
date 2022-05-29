@@ -210,15 +210,33 @@ input {
 
     &__input,
     &__textarea,
-    &__select {
+    &__select,
+    &__input__file {
       width: 100%;
       border: 1.5px solid $color-secondary;
       border-radius: .6rem;
+
     }
+
+
 
     &__input {
       height: 50px;
+
     }
+
+    &__input__file {
+      height: 150px;
+      border: 1.5px dashed $color-secondary;
+
+      input[type="file"] {
+        opacity: 0;
+        width: 100%;
+        height: 100%;
+        cursor: pointer;
+      }
+    }
+
 
     &__textarea {
       height: 150px;
@@ -245,6 +263,7 @@ input {
 
     }
 
+
     &__append {
       position: absolute;
       color: $color-secondary;
@@ -253,6 +272,15 @@ input {
       z-index: -1;
     }
 
+
+    &__append__file {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -20%);
+      color: $color-secondary;
+      z-index: -1;
+    }
 
 
   }
@@ -268,6 +296,8 @@ input {
     border: 1.5px solid $color-info;
   }
 
-
+  .form__input__file:hover {
+    border: 1.5px dashed $color-info;
+  }
 
 }

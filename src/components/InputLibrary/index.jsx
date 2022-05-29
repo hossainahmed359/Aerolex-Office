@@ -56,6 +56,17 @@ const InputLibrary = () => {
             <span className='form__append'>Append</span>
           </div>
         </div>
+        {/* UPLOAD FILE */}
+        <div className="plain-form">
+          <div action="" className="form">
+            <label htmlFor="" className="form__label">Select File</label>
+            <div className='form__input__file'>
+              <input type="file" className="" placeholder=" " />
+            </div>
+            <span className='form__append__file'>Upload your image</span>
+          </div>
+        </div>
+        {/* TEXT AREA */}
         <div className="plain-form">
           <div action="" className="form">
             <label htmlFor="" className="form__label">Description</label>
@@ -76,7 +87,6 @@ const InputLibrary = () => {
             <span className='form__append'>Icon</span>
           </div>
         </div>
-        <input type="file" />
       </div>
     </div>
   );
