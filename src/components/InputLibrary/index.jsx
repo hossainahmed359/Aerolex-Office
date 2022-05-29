@@ -1,5 +1,7 @@
 import React from 'react';
 
+/* THIS COMPONENT IS ONLY MARKUP (HTML & SCSS ONLY) */
+
 const InputLibrary = () => {
   return (
     <div>
@@ -39,7 +41,7 @@ const InputLibrary = () => {
       </div>
       {/* PLAIN */}
       <div className='plain-form-container'>
-        <h2>Standard</h2>
+        <h2>Plain</h2>
         <div className="plain-form">
           <div action="" className="form">
             <label htmlFor="" className="form__label">Email</label>

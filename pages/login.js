@@ -1,3 +1,9 @@
+import { Form, StandardInput } from './../src/components/FormInput/FormInput';
+
+const onSubmit = async (data, e) => {
+  console.log(data, e)
+}
+
 const Login = () => {
   return (
     <div className="login">
@@ -27,34 +33,43 @@ const Login = () => {
           <div className="right-items">
             <div className="form-section">
               <h1>Log In to Your Account</h1>
-              <form action="" method="post">
-                <div className="standard-form">
-                  <div action="" className="form">
-                    <input type="text" className="form__input" placeholder=" " />
-                    <label htmlFor="" className="form__label">Email</label>
-                    <span className='form__append'>Append</span>
-                  </div>
-                </div>
-                <div className="standard-form">
-                  <div action="" className="form">
-                    <input type="password" className="form__input" placeholder=" " />
-                    <label htmlFor="" className="form__label">Password</label>
-                  </div>
-                </div>
-                <div className="checkbox-pass">
-                  <div className="check-box">
-                    <input className="check-btn" type="checkbox" name="remember-me" id="remember-me" />
-                    <label htmlFor="remember-me">Remember me</label>
-                  </div>
-                  <div className="pass">Forgot password?</div>
-                </div>
-                <button type="submit" className="btn-danger-lg ">Login</button>
-
-                <div className="signup_link">
-                  Not a member? <a href="#">Signup</a>
-                </div>
-
-              </form>
+              <Form onSubmit={onSubmit} defaultValues={null} watchFields={[]}>
+                {(register, errors, undefined, subscribedWatchFields) => {
+                  return (
+                    <>
+                      <StandardInput
+                        register={register}
+                        errors={errors}
+                        label={'Username'}
+                        inputType={'text'}
+                        name={'name'}
+                        required={true}
+                        append={'append'}
+                      />
+                      <StandardInput
+                        register={register}
+                        errors={errors}
+                        label={'Password'}
+                        inputType={'password'}
+                        name={'password'}
+                        required={true}
+                        append={'append'}
+                      />
+                      <div className="checkbox-pass">
+                        <div className="check-box">
+                          <input className="check-btn" type="checkbox" name="remember-me" id="remember-me" />
+                          <label htmlFor="remember-me">Remember me</label>
+                        </div>
+                        <div className="pass">Forgot password?</div>
+                      </div>
+                      <button type="submit" className="btn-danger-lg ">Login</button>
+                      <div className="signup_link">
+                        Not a member? <a href="#">Signup</a>
+                      </div>
+                    </>
+                  )
+                }}
+              </Form>
             </div>
           </div>
         </div>
@@ -64,3 +79,36 @@ const Login = () => {
 };
 
 export default Login;
+
+
+/* Prev Code */
+
+{/*
+<form action="" method="post">
+  <div className="standard-form">
+    <div action="" className="form">
+      <input type="text" className="form__input" placeholder=" " />
+      <label htmlFor="" className="form__label">Email</label>
+      <span className='form__append'>Append</span>
+    </div>
+  </div>
+  <div className="standard-form">
+    <div action="" className="form">
+      <input type="password" className="form__input" placeholder=" " />
+      <label htmlFor="" className="form__label">Password</label>
+    </div>
+  </div>
+  <div className="checkbox-pass">
+    <div className="check-box">
+      <input className="check-btn" type="checkbox" name="remember-me" id="remember-me" />
+      <label htmlFor="remember-me">Remember me</label>
+    </div>
+    <div className="pass">Forgot password?</div>
+  </div>
+  <button type="submit" className="btn-danger-lg ">Login</button>
+
+  <div className="signup_link">
+    Not a member? <a href="#">Signup</a>
+  </div>
+</form>
+ */}
