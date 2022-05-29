@@ -1,7 +1,10 @@
 import { Form, StandardInput } from './../src/components/FormInput/FormInput';
 
+/* OnSubmit */
 const onSubmit = async (data, e) => {
   console.log(data, e)
+  window.alert(data?.name + data?.password)
+  e.target.reset()
 }
 
 const Login = () => {

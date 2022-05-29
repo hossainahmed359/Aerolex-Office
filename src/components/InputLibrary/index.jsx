@@ -76,6 +76,7 @@ const InputLibrary = () => {
             <span className='form__append'>Icon</span>
           </div>
         </div>
+        <input type="file" />
       </div>
     </div>
   );
